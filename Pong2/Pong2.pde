@@ -36,5 +36,15 @@ void draw(){
     speedBally = -speedBally;
     sound.trigger();
   }
-  
+  rect(mouseX, 465, 90, 23);
+  boolean inter = intersects(ballx, bally, mouseX, 532, 90);
+  if(inter){
+   speedBally = -speedBally;
+  }
+}
+boolean intersects(int ballX, int ballY, int paddleX, int paddleY, int paddleLength) {
+if (ballY > paddleY - paddleLength && ballX > paddleX && ballX < paddleX + paddleLength)
+return true;
+else 
+return false;
 }
