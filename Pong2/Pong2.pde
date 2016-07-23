@@ -19,9 +19,10 @@ void draw() {
   stroke(0, 255, 0);
   //ball.move();
   rect(mouseX, 465, 200, 23);
-  boolean inter = intersects(ball.ballx, ball.bally, mouseX, 500, 200);
+  boolean inter = intersects(ball.ballx, ball.bally, mouseX, 450, 200);
   if (inter) {
     ball.speedBally = -ball.speedBally;
+    ball.bally-=10;
     score ++;
     println("Hello");
   }
